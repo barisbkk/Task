@@ -33,7 +33,7 @@ const cities = [
   "Isparta",
   "İçel (Mersin)",
   "İstanbul",
-  "İzmir",
+  "izmir",
   "Kars",
   "Kastamonu",
   "Kayseri",
@@ -88,7 +88,7 @@ const suggestionsList = document.getElementById("suggestionsList");
 searchInput.addEventListener("input", function () {
   const inputValue = this.value.toLowerCase();
   const suggestions = cities.filter((city) =>
-    city.toLowerCase().startsWith(inputValue)
+    city.toLocaleLowerCase().startsWith(inputValue)
   );
   renderSuggestions(suggestions);
 });
